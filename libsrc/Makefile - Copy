@@ -1,0 +1,24 @@
+CC = g++
+
+#AR = ar
+
+CFLAG = -O2 -W -Wall -fPIC
+
+INCLUDE =
+TARGET = libskmsq.so
+OBJ = msgsocket.o remsg.o
+SRC = msgsocket.c remsg.c
+
+
+all:$(TARGET)
+$(OBJ):$(SRC)
+	$(CC) $(CFLAG) $(INCLUDE) $(LIB) -c $(SRC)
+
+$(TARGET):$(OBJ)
+	$(AR) cq $@ $^
+
+clean:
+	rm -f *.o $(TARGET)
+
+
+

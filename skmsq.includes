@@ -1,0 +1,6 @@
+libsrc
+serverAF_UNIX
+libsrc/task
+libtask/src
+clientAF_UNIX
+libtask/include
